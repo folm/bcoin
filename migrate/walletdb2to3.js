@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const bcoin = require('../');
+const fcoin = require('../');
 const walletdb = require('../lib/wallet/walletdb');
 const encoding = require('../lib/utils/encoding');
 const Path = require('../lib/wallet/path');
@@ -19,7 +19,7 @@ assert(typeof file === 'string', 'Please pass in a database path.');
 
 file = file.replace(/\.ldb\/?$/, '');
 
-const db = bcoin.ldb({
+const db = fcoin.ldb({
   location: file,
   db: 'leveldb',
   compression: true,
@@ -267,7 +267,7 @@ function accountFromRaw(data, dbkey) {
   dbkey = readAccountKey(dbkey);
   account.wid = dbkey.wid;
   account.id = 'doesntmatter';
-  account.network = bcoin.network.fromMagic(p.readU32());
+  account.network = fcoin.network.fromMagic(p.readU32());
   account.name = p.readVarString('utf8');
   account.initialized = p.readU8() === 1;
   account.type = p.readU8();
@@ -277,7 +277,7 @@ function accountFromRaw(data, dbkey) {
   account.accountIndex = p.readU32();
   account.receiveDepth = p.readU32();
   account.changeDepth = p.readU32();
-  account.accountKey = bcoin.hd.fromRaw(p.readBytes(82));
+  account.accountKey = fcoin.hd.fromRaw(p.readBytes(82));
   account.keys = [];
   account.watchOnly = false;
   account.nestedDepth = 0;
@@ -293,7 +293,7 @@ function accountFromRaw(data, dbkey) {
   const count = p.readU8();
 
   for (let i = 0; i < count; i++) {
-    const key = bcoin.hd.fromRaw(p.readBytes(82));
+    const key = fcoin.hd.fromRaw(p.readBytes(82));
     account.keys.push(key);
   }
 
@@ -304,7 +304,7 @@ function walletFromRaw(data) {
   const wallet = {};
   const p = new BufferReader(data);
 
-  wallet.network = bcoin.network.fromMagic(p.readU32());
+  wallet.network = fcoin.network.fromMagic(p.readU32());
   wallet.wid = p.readU32();
   wallet.id = p.readVarString('utf8');
   wallet.initialized = p.readU8() === 1;
@@ -329,14 +329,14 @@ function keyFromRaw(data, network) {
   const ring = {};
   const p = new BufferReader(data);
 
-  ring.network = bcoin.network.get(network);
+  ring.network = fcoin.network.get(network);
   ring.witness = p.readU8() === 1;
 
   const key = p.readVarBytes();
 
   if (key.length === 32) {
     ring.privateKey = key;
-    ring.publicKey = bcoin.secp256k1.publicKeyCreate(key, true);
+    ring.publicKey = fcoin.secp256k1.publicKeyCreate(key, true);
   } else {
     ring.publicKey = key;
   }
@@ -344,7 +344,7 @@ function keyFromRaw(data, network) {
   const script = p.readVarBytes();
 
   if (script.length > 0)
-    ring.script = bcoin.script.fromRaw(script);
+    ring.script = fcoin.script.fromRaw(script);
 
   return ring;
 }

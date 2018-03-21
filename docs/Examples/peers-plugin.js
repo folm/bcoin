@@ -1,7 +1,7 @@
 'use strict';
 
-const bcoin = require('../..');
-const FullNode = bcoin.fullnode;
+const fcoin = require('../..');
+const FullNode = fcoin.fullnode;
 
 function MyPlugin(node) {
   this.node = node;

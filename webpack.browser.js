@@ -9,8 +9,8 @@ const env = process.env;
 module.exports = {
   target: 'web',
   entry: {
-    'bcoin': './lib/bcoin-browser',
-    'bcoin-worker': './lib/workers/worker'
+    'fcoin': './lib/fcoin-browser',
+    'fcoin-worker': './lib/workers/worker'
   },
   output: {
     path: path.join(__dirname, 'browser'),
@@ -25,7 +25,7 @@ module.exports = {
       'process.env.BCOIN_NETWORK':
         str(env.BCOIN_NETWORK || 'main'),
       'process.env.BCOIN_WORKER_FILE':
-        str(env.BCOIN_WORKER_FILE || '/bcoin-worker.js')
+        str(env.BCOIN_WORKER_FILE || '/fcoin-worker.js')
     }),
     new UglifyJsPlugin({
       compress: {

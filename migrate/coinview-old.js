@@ -1,7 +1,7 @@
 /*!
- * coinview.js - coinview object for bcoin
+ * coinview.js - coinview object for fcoin
  * Copyright (c) 2014-2016, Christopher Jeffrey (MIT License).
- * https://github.com/bcoin-org/bcoin
+ * https://github.com/folm/fcoin
  */
 
 /* eslint-disable */

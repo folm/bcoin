@@ -20,7 +20,7 @@ const tx9 = common.readTX('tx9');
 
 describe('Protocol', function() {
   const pkg = require('../lib/pkg');
-  const agent = `/bcoin:${pkg.version}/`;
+  const agent = `/fcoin:${pkg.version}/`;
   let parser, framer;
 
   beforeEach(() => {

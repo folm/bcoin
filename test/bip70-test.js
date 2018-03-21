@@ -161,7 +161,7 @@ describe('BIP70', function() {
       version: 25,
       paymentDetails: {
         network: 'testnet',
-        paymentUrl: 'http://bcoin.io/payment',
+        paymentUrl: 'http://fcoin.io/payment',
         memo: 'foobar',
         time: util.now(),
         expires: util.now() + 3600,
@@ -183,7 +183,7 @@ describe('BIP70', function() {
 
     assert.strictEqual(req.version, 25);
     assert.strictEqual(req.paymentDetails.paymentUrl,
-      'http://bcoin.io/payment');
+      'http://fcoin.io/payment');
     assert.strictEqual(req.paymentDetails.network, 'testnet');
     assert(req.paymentDetails.time <= util.now());
     assert.strictEqual(req.paymentDetails.expires,

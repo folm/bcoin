@@ -1,7 +1,7 @@
 /*!
- * compress.js - coin compressor for bcoin
+ * compress.js - coin compressor for fcoin
  * Copyright (c) 2014-2016, Christopher Jeffrey (MIT License).
- * https://github.com/bcoin-org/bcoin
+ * https://github.com/folm/fcoin
  */
 
 'use strict';
@@ -103,7 +103,7 @@ function decompressScript(script, br) {
 
 /**
  * Compress value using an exponent. Takes advantage of
- * the fact that many bitcoin values are divisible by 10.
+ * the fact that many folm values are divisible by 10.
  * @see https://github.com/btcsuite/btcd/blob/master/blockchain/compress.go
  * @param {Amount} value
  * @returns {Number}

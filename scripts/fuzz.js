@@ -21,7 +21,7 @@ try {
 }
 
 if (consensus)
-  util.log('Running against bitcoinconsensus...');
+  util.log('Running against folmconsensus...');
 
 const MANDATORY = flags.MANDATORY_VERIFY_FLAGS | flags.VERIFY_WITNESS;
 const STANDARD = flags.STANDARD_VERIFY_FLAGS;
@@ -39,8 +39,8 @@ function assertConsensus(tx, output, flags, code) {
   const err = verifyConsensus(tx, 0, output, 0, flags);
 
   if (err !== code) {
-    util.log('bitcoinconsensus mismatch!');
-    util.log(`${err} (bitcoin core) !== ${code} (bcoin)`);
+    util.log('folmconsensus mismatch!');
+    util.log(`${err} (folm core) !== ${code} (fcoin)`);
     util.log(tx);
     util.log(output);
     util.log(flags);

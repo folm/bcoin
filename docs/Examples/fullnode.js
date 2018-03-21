@@ -1,7 +1,7 @@
 'use strict';
 
-const bcoin = require('../..');
-const FullNode = bcoin.fullnode;
+const fcoin = require('../..');
+const FullNode = fcoin.fullnode;
 
 const node = new FullNode({
   network: 'testnet',

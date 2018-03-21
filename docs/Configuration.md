@@ -1,6 +1,6 @@
-By default, the mainnet bcoin config file will reside in ~/.bcoin/bcoin.conf.
+By default, the mainnet fcoin config file will reside in ~/.fcoin/fcoin.conf.
 
-All bcoin configuration options work in the config file, CLI arguments, and
+All fcoin configuration options work in the config file, CLI arguments, and
 process environment (with a `BCOIN_` prefix).
 
 ## Datadir/Prefix
@@ -10,10 +10,10 @@ Bcoin's datadir is determined by the `prefix` option.
 Example:
 
 ``` bash
-$ bcoin --prefix ~/.bcoin_spv --spv
+$ fcoin --prefix ~/.fcoin_spv --spv
 ```
 
-Will create a datadir of `~/.bcoin_spv`, containing a chain database, wallet database and log file.
+Will create a datadir of `~/.fcoin_spv`, containing a chain database, wallet database and log file.
 
 ## Common Options
 
@@ -26,7 +26,7 @@ Will create a datadir of `~/.bcoin_spv`, containing a chain database, wallet dat
 
 ## Node Options
 
-- `prefix`: The data directory (stores databases, logs, and configs) (default=~/.bcoin).
+- `prefix`: The data directory (stores databases, logs, and configs) (default=~/.fcoin).
 - `db`: Which database backend to use (default=leveldb).
 - `max-files`: Max open files for leveldb. Higher generally means more disk page cache benefits, but also more memory usage (default: 64).
 - `cache-size`: Size (in MB) of leveldb cache and write buffer (default: 32mb).
@@ -76,7 +76,7 @@ Note that certain chain options affect the format and indexing of the chain data
 
 ## Miner Options
 
-- `coinbase-flags`: Coinbase flags (default: mined by bcoin).
+- `coinbase-flags`: Coinbase flags (default: mined by fcoin).
 - `coinbase-address`: List of payout addresses, randomly selected during block creation (comma-separated).
 - `max-block-weight`: Max block weight to mine (default: 4000000).
 - `reserved-block-weight`: Amount of space reserved for coinbase (default: 4000).
@@ -95,4 +95,4 @@ Note that certain chain options affect the format and indexing of the chain data
 
 ## Sample Config File
 
-See https://github.com/bcoin-org/bcoin/blob/master/etc/sample.conf.
+See https://github.com/folm/fcoin/blob/master/etc/sample.conf.

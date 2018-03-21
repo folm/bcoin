@@ -1,15 +1,15 @@
 # Bcoin
 
-__NOTE__: The latest release of bcoin contains a non-backward compatible change
+__NOTE__: The latest release of fcoin contains a non-backward compatible change
 to the rest API. Please read the [changelog]'s "migrating" section for more
 details.
 
 ---
 
-**Bcoin** is an alternative implementation of the bitcoin protocol, written in
+**Bcoin** is an alternative implementation of the folm protocol, written in
 node.js.
 
-Although still in a beta state, bcoin is well tested and aware of all known
+Although still in a beta state, fcoin is well tested and aware of all known
 consensus rules. It is currently used in production as the consensus backend
 and wallet system for [purse.io][purse].
 
@@ -22,28 +22,28 @@ and wallet system for [purse.io][purse].
 - Layer 2 Backend (lightning)
 - General Purpose Bitcoin Library
 
-Try it in the browser: http://bcoin.io/browser.html
+Try it in the browser: http://fcoin.io/browser.html
 
 ## Install
 
 ```
-$ git clone git://github.com/bcoin-org/bcoin.git
-$ cd bcoin
+$ git clone git://github.com/folm/fcoin.git
+$ cd fcoin
 $ npm install
-$ ./bin/bcoin
+$ ./bin/fcoin
 ```
 
 See the [Beginner's Guide][guide] for more in-depth installation instructions.
 
 ## Documentation
 
-- API Docs: http://bcoin.io/docs/
-- REST Docs: http://bcoin.io/api-docs/index.html
+- API Docs: http://fcoin.io/docs/
+- REST Docs: http://fcoin.io/api-docs/index.html
 - Docs: [docs/](docs/README.md)
 
 ## Support
 
-Join us on [freenode][freenode] in the [#bcoin][irc] channel.
+Join us on [freenode][freenode] in the [#fcoin][irc] channel.
 
 ## Disclaimer
 
@@ -65,7 +65,7 @@ all code is your original work. `</legalese>`
 See LICENSE for more info.
 
 [purse]: https://purse.io
-[guide]: https://github.com/bcoin-org/bcoin/blob/master/docs/Beginner's-Guide.md
+[guide]: https://github.com/folm/fcoin/blob/master/docs/Beginner's-Guide.md
 [freenode]: https://freenode.net/
-[irc]: irc://irc.freenode.net/bcoin
-[changelog]: https://github.com/bcoin-org/bcoin/blob/master/CHANGELOG.md
+[irc]: irc://irc.freenode.net/fcoin
+[changelog]: https://github.com/folm/fcoin/blob/master/CHANGELOG.md

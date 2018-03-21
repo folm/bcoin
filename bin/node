@@ -2,11 +2,11 @@
 
 'use strict';
 
-process.title = 'bcoin';
+process.title = 'fcoin';
 
 if (process.argv.indexOf('--help') !== -1
     || process.argv.indexOf('-h') !== -1) {
-  console.error('See the bcoin wiki at: https://github.com/bcoin-org/bcoin/wiki.');
+  console.error('See the fcoin wiki at: https://github.com/folm/fcoin/wiki.');
   process.exit(1);
   throw new Error('Could not exit.');
 }

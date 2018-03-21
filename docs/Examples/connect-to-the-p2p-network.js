@@ -1,12 +1,12 @@
 'use strict';
-const bcoin = require('../..').set('main');
-const Chain = bcoin.chain;
-const Mempool = bcoin.mempool;
-const Pool = bcoin.pool;
+const fcoin = require('../..').set('main');
+const Chain = fcoin.chain;
+const Mempool = fcoin.mempool;
+const Pool = fcoin.pool;
 
 // Create a blockchain and store it in leveldb.
 // `db` also accepts `rocksdb` and `lmdb`.
-const prefix = process.env.HOME + '/my-bcoin-environment';
+const prefix = process.env.HOME + '/my-fcoin-environment';
 const chain = new Chain({
   db: 'leveldb',
   location: prefix + '/chain',

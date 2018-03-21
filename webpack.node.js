@@ -9,8 +9,8 @@ const env = process.env;
 module.exports = {
   target: 'node',
   entry: {
-    'bcoin': './lib/bcoin-browser',
-    'bcoin-worker': './lib/workers/worker'
+    'fcoin': './lib/fcoin-browser',
+    'fcoin-worker': './lib/workers/worker'
   },
   output: {
     path: __dirname,
@@ -37,7 +37,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.BCOIN_WORKER_FILE':
-        str(env.BCOIN_WORKER_FILE || 'bcoin-worker.js')
+        str(env.BCOIN_WORKER_FILE || 'fcoin-worker.js')
     }),
     new webpack.IgnorePlugin(/^utf-8-validate|bufferutil$/),
     new UglifyJsPlugin({

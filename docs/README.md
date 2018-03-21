@@ -1,4 +1,4 @@
-Welcome to the bcoin docs!
+Welcome to the fcoin docs!
 
 ## Getting Started
 - [Getting Started][getting-started]
@@ -31,11 +31,11 @@ Welcome to the bcoin docs!
 [configuration]: Configuration.md
 [design]: Design.md
 [wallet-system]: Wallet-System.md
-[guides]: http://bcoin.io/guides.html
+[guides]: http://fcoin.io/guides.html
 
 [cli]: CLI.md
 [browser]: Running-in-the-browser.md
-[rest-rpc]: http://bcoin.io/api-docs/index.html#introduction
+[rest-rpc]: http://fcoin.io/api-docs/index.html#introduction
 
 [example-p2p]: Examples/connect-to-the-p2p-network.js
 [example-blockchain]: Examples/create-a-blockchain-and-mempool.js

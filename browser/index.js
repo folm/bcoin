@@ -2,7 +2,7 @@
 
 'use strict';
 
-var util = bcoin.util;
+var util = fcoin.util;
 var body = document.getElementsByTagName('body')[0];
 var log = document.getElementById('log');
 var wdiv = document.getElementById('wallet');
@@ -35,9 +35,9 @@ function show(obj) {
   floating.style.display = 'block';
 }
 
-logger = new bcoin.logger({ level: 'debug', console: true });
+logger = new fcoin.logger({ level: 'debug', console: true });
 logger.writeConsole = function(level, module, args) {
-  var name = bcoin.logger.levelsByVal[level];
+  var name = fcoin.logger.levelsByVal[level];
   var msg = util.format(args, false);
   if (++scrollback > 1000) {
     log.innerHTML = '';
@@ -98,7 +98,7 @@ send.onsubmit = function(ev) {
   options = {
     outputs: [{
       address: address,
-      value: bcoin.amount.value(value)
+      value: fcoin.amount.value(value)
     }]
   };
 
@@ -165,7 +165,7 @@ function addItem(item, entry) {
   chainState.innerHTML = ''
     + 'tx=' + node.chain.db.state.tx
     + ' coin=' + node.chain.db.state.coin
-    + ' value=' + bcoin.amount.btc(node.chain.db.state.value);
+    + ' value=' + fcoin.amount.btc(node.chain.db.state.value);
 }
 
 function setMouseup(el, obj) {
@@ -199,11 +199,11 @@ function formatWallet(wallet) {
 
   wallet.getBalance().then(function(balance) {
     html += 'Confirmed Balance: <b>'
-      + bcoin.amount.btc(balance.confirmed)
+      + fcoin.amount.btc(balance.confirmed)
       + '</b><br>';
 
     html += 'Unconfirmed Balance: <b>'
-      + bcoin.amount.btc(balance.unconfirmed)
+      + fcoin.amount.btc(balance.unconfirmed)
       + '</b><br>';
 
     return wallet.getHistory();
@@ -226,7 +226,7 @@ function formatWallet(wallet) {
   });
 }
 
-node = new bcoin.fullnode({
+node = new fcoin.fullnode({
   hash: true,
   query: true,
   prune: true,
@@ -235,11 +235,11 @@ node = new bcoin.fullnode({
   coinCache: 30000000,
   logConsole: true,
   workers: true,
-  workerFile: '/bcoin-worker.js',
+  workerFile: '/fcoin-worker.js',
   logger: logger
 });
 
-wdb = node.use(bcoin.wallet.plugin);
+wdb = node.use(fcoin.wallet.plugin);
 
 node.chain.on('block', addItem);
 node.mempool.on('tx', addItem);

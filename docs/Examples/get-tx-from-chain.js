@@ -1,10 +1,10 @@
 'use strict';
 
 const path = require('path');
-const bcoin = require('../..');
-const Chain = bcoin.chain;
-const Logger = bcoin.logger;
-const util = bcoin.util;
+const fcoin = require('../..');
+const Chain = fcoin.chain;
+const Logger = fcoin.logger;
+const util = fcoin.util;
 
 const HOME = process.env.HOME;
 
@@ -18,7 +18,7 @@ const chain = new Chain({
   logger: logger,
   network: 'testnet',
   db: 'leveldb',
-  prefix: path.join(HOME, '.bcoin/testnet'),
+  prefix: path.join(HOME, '.fcoin/testnet'),
   indexTX: true,
   indexAddress: true
 });
