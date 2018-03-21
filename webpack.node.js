@@ -36,8 +36,8 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.BCOIN_WORKER_FILE':
-        str(env.BCOIN_WORKER_FILE || 'fcoin-worker.js')
+      'process.env.FCOIN_WORKER_FILE':
+        str(env.FCOIN_WORKER_FILE || 'fcoin-worker.js')
     }),
     new webpack.IgnorePlugin(/^utf-8-validate|bufferutil$/),
     new UglifyJsPlugin({

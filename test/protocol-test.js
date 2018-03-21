@@ -90,13 +90,13 @@ describe('Protocol', function() {
     new NetAddress({
       services: 1,
       host: '127.0.0.1',
-      port: 8333,
+      port: 53656,
       time: util.now()
     }),
     new NetAddress({
       services: 1,
       host: '::123:456:789a',
-      port: 18333,
+      port: 43246,
       time: util.now()
     })
   ];

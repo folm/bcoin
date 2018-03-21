@@ -1,7 +1,7 @@
 By default, the mainnet fcoin config file will reside in ~/.fcoin/fcoin.conf.
 
 All fcoin configuration options work in the config file, CLI arguments, and
-process environment (with a `BCOIN_` prefix).
+process environment (with a `FCOIN_` prefix).
 
 ## Datadir/Prefix
 
@@ -65,7 +65,7 @@ Note that certain chain options affect the format and indexing of the chain data
 - `max-inbound`: Max number of inbound connections (default: 30).
 - `seeds`: Custom list of DNS seeds (comma-separated).
 - `host`: Host to listen on (default: 0.0.0.0).
-- `port`: Port to listen on (default: 8333).
+- `port`: Port to listen on (default: 53656).
 - `public-host`: Public host to advertise on network.
 - `public-port`: Public port to advertise on network.
 - `bip150`: Enable bip150 peer auth (default: false).

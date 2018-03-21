@@ -113,7 +113,7 @@ Your hidden service must first be configured with `tor`. Once you have the `.oni
 It's often desirable to run behind several trusted folm nodes. To select permanent nodes to connect to, the `--nodes` option is available:
 
 ``` bash
-$ fcoin --nodes foo.example.com:8333,1.2.3.4:8333,5.6.7.8:8333
+$ fcoin --nodes foo.example.com:53656,1.2.3.4:53656,5.6.7.8:53656
 ```
 
 If chosen, fcoin will _always_ try to connect to these nodes as outbound peers. They are top priority and whitelisted (not susceptible to permanent bans, only disconnections).

@@ -5,9 +5,9 @@ Bcoin ships with fcoin-cli as its default HTTP client for command line access.
 Examples:
 
 ``` bash
-$ export BCOIN_API_KEY=hunter2
-$ export BCOIN_NETWORK=main
-$ export BCOIN_URI=http://localhost:8332
+$ export FCOIN_API_KEY=hunter2
+$ export FCOIN_NETWORK=main
+$ export FCOIN_URI=http://localhost:8332
 $ fcoin cli info
 ```
 
@@ -23,7 +23,7 @@ $ fcoin cli info --config=~/cli.conf
 ## Examples
 
 ``` bash
-$ export BCOIN_API_KEY=your-api-key
+$ export FCOIN_API_KEY=your-api-key
 
 # View the genesis block
 $ fcoin cli block 0
