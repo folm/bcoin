@@ -1,6 +1,6 @@
 ## Notes on Design
 
-Bcoin is thoroughly event driven. It has a fullnode object, but Bcoin was
+Folmcoin is thoroughly event driven. It has a fullnode object, but Folmcoin was
 specifically designed so the mempool, blockchain, p2p pool, and wallet database
 could all be used separately. All the fullnode object does is tie these things
 together. It's essentially a huge proxying of events. The general communication
@@ -36,7 +36,7 @@ well-written.
 
 #### Concurrency
 
-Bcoin runs in node.js, so the javascript code is limited to one thread. We
+Folmcoin runs in node.js, so the javascript code is limited to one thread. We
 solve this limitation by spinning up persistent worker processes for
 transaction verification (webworkers when in the browser). This ensures the
 blockchain and mempool do not block the master process very much. It also means
@@ -50,7 +50,7 @@ data to another process.
 But of course, there is a benefit to having a multi-process architecture: the
 worker processes can die on their own without disturbing the master process.
 
-Bcoin uses [secp256k1-node][secp256k1-node] for ecdsa verification, which is a
+Folmcoin uses [secp256k1-node][secp256k1-node] for ecdsa verification, which is a
 node.js binding to Pieter Wuille's blazingly fast [libsecp256k1][libsecp256k1]
 library.
 

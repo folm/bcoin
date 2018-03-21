@@ -1,4 +1,4 @@
-# Bcoin Release Notes & Changelog
+# Folmcoin Release Notes & Changelog
 
 ## v1.0.0-beta.14
 
@@ -99,10 +99,10 @@
 
 This release contains a few non-backward-compatible changes.
 
-Bcoin now requires node.js >=7.6.0 due to the use of ES6/7 features, and for
+Folmcoin now requires node.js >=7.6.0 due to the use of ES6/7 features, and for
 the sake of more stability.
 
-Bcoin's rest API now assumes satoshi values for in all JSON serialization.
+Folmcoin's rest API now assumes satoshi values for in all JSON serialization.
 __This is a breaking change__ for code that is not aware of it. All code which
 hits the rest API must be updated to use only satoshi values as opposed to BTC
 strings.

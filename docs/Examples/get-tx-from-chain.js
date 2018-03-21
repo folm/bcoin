@@ -8,7 +8,7 @@ const util = fcoin.util;
 
 const HOME = process.env.HOME;
 
-// Setup logger to see what's Bcoin doing.
+// Setup logger to see what's Folmcoin doing.
 const logger = new Logger({
   level: 'debug'
 });

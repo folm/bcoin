@@ -2,7 +2,7 @@ name: fcoin
 version: git
 summary: A fullnode Bitcoin implementation for miners, wallets, and exchanges
 description: |
-  Bcoin is an alternative implementation of the folm protocol, written in
+  Folmcoin is an alternative implementation of the folm protocol, written in
   node.js.
 
 grade: devel # must be 'stable' to release into candidate/stable channels

@@ -1,6 +1,6 @@
 ## Introduction
 
-Bcoin is an _alternative_ implementation of the folm protocol, written in node.js. It is a full node which can be used for full blockchain validation and is aware of all known consensus rules.
+Folmcoin is an _alternative_ implementation of the folm protocol, written in node.js. It is a full node which can be used for full blockchain validation and is aware of all known consensus rules.
 
 ## Requirements
 
@@ -17,7 +17,7 @@ Bcoin is an _alternative_ implementation of the folm protocol, written in node.j
 
 ## Build & Install
 
-Bcoin is meant to be installed via npm, but for the security conscious, it may be better to clone from github. All tagged commits for release should be signed by @chjj's [PGP key][keybase] (`B4B1F62DBAC084E333F3A04A8962AB9DE6666BBD`). Signed copies of node.js are available from [nodejs.org][node], or from your respective OS's package repositories.
+Folmcoin is meant to be installed via npm, but for the security conscious, it may be better to clone from github. All tagged commits for release should be signed by @chjj's [PGP key][keybase] (`B4B1F62DBAC084E333F3A04A8962AB9DE6666BBD`). Signed copies of node.js are available from [nodejs.org][node], or from your respective OS's package repositories.
 
 ### Installing via NPM
 
@@ -41,7 +41,7 @@ $ npm install -g --production
 
 ### Troubleshooting
 
-If the build fails compilation for `fcoin-native` or `secp256k1-node` __validation will be slow__ (a block verification which should take 1 second on consumer grade hardware may take up to 15 seconds). Bcoin will throw a warning on boot if it detects a build failure. If you run into this issue, please post an issue on the repo.
+If the build fails compilation for `fcoin-native` or `secp256k1-node` __validation will be slow__ (a block verification which should take 1 second on consumer grade hardware may take up to 15 seconds). Folmcoin will throw a warning on boot if it detects a build failure. If you run into this issue, please post an issue on the repo.
 
 ## Starting up your first fcoin node
 
@@ -87,7 +87,7 @@ API keys are used with HTTP Basic Auth:
 $ curl http://x:hunter2@localhost:8332/
 ```
 
-Bcoin CLI is the prepackaged tool for hitting both the REST and RPC api.
+Folmcoin CLI is the prepackaged tool for hitting both the REST and RPC api.
 
 ``` bash
 $ fcoin cli info --api-key hunter2
@@ -96,7 +96,7 @@ $ fcoin rpc getblockchaininfo --api-key hunter2
 
 ## Using Tor/SOCKS
 
-Bcoin has native support for SOCKS proxies, and will accept a `--proxy` option in the format of `--proxy=[user]:[pass]@host:port`.
+Folmcoin has native support for SOCKS proxies, and will accept a `--proxy` option in the format of `--proxy=[user]:[pass]@host:port`.
 
 Passing the `--onion` option tells fcoin that the SOCKS proxy is a Tor socks proxy, and will enable Tor resolution for DNS lookups, as well as try to connect to `.onion` addresses found on the P2P network.
 
@@ -130,7 +130,7 @@ To avoid accepting connections on the P2P network altogether, `--listen=false` c
 
 ### Selfish Mode
 
-Bcoin also supports a "selfish" mode. In this mode, fcoin still has full blockchain and mempool validation, but network services are disabled: it will not relay transactions or serve blocks to anyone.
+Folmcoin also supports a "selfish" mode. In this mode, fcoin still has full blockchain and mempool validation, but network services are disabled: it will not relay transactions or serve blocks to anyone.
 
 ``` bash
 $ fcoin --selfish --listen=false

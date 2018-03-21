@@ -3,7 +3,7 @@
 if (process.argv.indexOf('-h') !== -1
     || process.argv.indexOf('--help') !== -1
     || process.argv.length < 3) {
-  console.error('Bcoin database migration (chaindb v2->v3).');
+  console.error('Folmcoin database migration (chaindb v2->v3).');
   console.error('');
   console.error('Usage:');
   console.error('  $ node migrate/chaindb2to3.js [database-path] [--prune]');

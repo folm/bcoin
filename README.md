@@ -1,4 +1,4 @@
-# Bcoin
+# Folmcoin
 
 __NOTE__: The latest release of fcoin contains a non-backward compatible change
 to the rest API. Please read the [changelog]'s "migrating" section for more
@@ -6,7 +6,7 @@ details.
 
 ---
 
-**Bcoin** is an alternative implementation of the folm protocol, written in
+**Folmcoin** is an alternative implementation of the folm protocol, written in
 node.js.
 
 Although still in a beta state, fcoin is well tested and aware of all known
@@ -47,7 +47,7 @@ Join us on [freenode][freenode] in the [#fcoin][irc] channel.
 
 ## Disclaimer
 
-Bcoin does not guarantee you against theft or lost funds due to bugs, mishaps,
+Folmcoin does not guarantee you against theft or lost funds due to bugs, mishaps,
 or your own incompetence. You and you alone are responsible for securing your
 money.
 

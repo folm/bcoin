@@ -8,7 +8,7 @@ Welcome to the fcoin docs!
 - [Guides][guides]
 
 ## Running
-- [Bcoin CLI][cli]
+- [Folmcoin CLI][cli]
 - [Running in the Browser][browser]
 - [REST and RPC API][rest-rpc]
 

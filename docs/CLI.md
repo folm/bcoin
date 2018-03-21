@@ -1,4 +1,4 @@
-Bcoin ships with fcoin-cli as its default HTTP client for command line access.
+Folmcoin ships with fcoin-cli as its default HTTP client for command line access.
 
 ## Configuration
 
@@ -121,7 +121,7 @@ fcoin-cli commands are split into 3 categories: cli, rpc, and wallet.
 
 ### RPC Commands
 
-Bcoin implements nearly all folmd calls along with some custom calls.
+Folmcoin implements nearly all folmd calls along with some custom calls.
 
 - `stop`
 - `help`

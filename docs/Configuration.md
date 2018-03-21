@@ -5,7 +5,7 @@ process environment (with a `FCOIN_` prefix).
 
 ## Datadir/Prefix
 
-Bcoin's datadir is determined by the `prefix` option.
+Folmcoin's datadir is determined by the `prefix` option.
 
 Example:
 
