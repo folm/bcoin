@@ -25,7 +25,8 @@
   "dependencies": {
     "bn.js": "4.11.8",
     "elliptic": "6.4.0",
-    "n64": "0.0.18"
+    "n64": "0.0.18",
+    "folmcoinhash": "https://github.com/folm/folmcoinhash.git"
   },
   "optionalDependencies": {
     "fcoin-native": "0.0.23",
